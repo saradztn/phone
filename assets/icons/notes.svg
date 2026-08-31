@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fb923c"/><stop offset="1" stop-color="#ea580c"/></linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<filter id="bl" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9.73"/></filter>
+</defs>
+<rect x="24.064" y="38.144" width="207.872" height="207.872" rx="49.92" fill="#000000" opacity="0.32" filter="url(#bl)"/>
+<rect x="24.064" y="24.064" width="207.872" height="207.872" rx="49.92" fill="url(#g)"/>
+<rect x="24.064" y="24.064" width="207.872" height="133.12" rx="49.92" fill="url(#sh)"/>
+<g transform="translate(60.16 52.48) scale(5.6533)"><path d="M6 2.5h12A1.5 1.5 0 0 1 19.5 4v16a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 20V4A1.5 1.5 0 0 1 6 2.5zm1 5h10v2H7zm0 4h10v2H7zm0 4h6v2H7z" fill="#ffffff" fill-rule="evenodd"/></g>
+</svg>

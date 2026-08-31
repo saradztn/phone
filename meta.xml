@@ -1,0 +1,123 @@
+<meta>
+    <info
+        author="Aura Phone"
+        name="Aura Phone"
+        version="1.0.0"
+        type="script"
+        description="DX Lua smartphone resource"
+    />
+
+
+
+    <!-- Shared -->
+    <script src="shared/constants.lua" type="shared"/>
+
+    <!-- Client core -->
+    <script src="client/config.lua" type="client"/>
+    <script src="client/state.lua" type="client"/>
+    <script src="client/utils.lua" type="client"/>
+    <script src="client/theme.lua" type="client"/>
+    <script src="client/animations.lua" type="client"/>
+    <script src="client/sounds.lua" type="client"/>
+    <script src="client/assets.lua" type="client"/>
+    <script src="client/input.lua" type="client"/>
+    <script src="client/ui_kit.lua" type="client"/>
+    <script src="client/notifications.lua" type="client"/>
+
+    <!-- Apps -->
+    <script src="client/apps/home.lua" type="client"/>
+    <script src="client/apps/messages.lua" type="client"/>
+    <script src="client/apps/contacts.lua" type="client"/>
+    <script src="client/apps/calls.lua" type="client"/>
+    <script src="client/apps/camera.lua" type="client"/>
+    <script src="client/apps/gallery.lua" type="client"/>
+    <script src="client/apps/maps.lua" type="client"/>
+    <script src="client/apps/bank.lua" type="client"/>
+    <script src="client/apps/wallet.lua" type="client"/>
+    <script src="client/apps/vehicles.lua" type="client"/>
+    <script src="client/apps/properties.lua" type="client"/>
+    <script src="client/apps/jobs.lua" type="client"/>
+    <script src="client/apps/emergency.lua" type="client"/>
+    <script src="client/apps/notes.lua" type="client"/>
+    <script src="client/apps/calculator.lua" type="client"/>
+    <script src="client/apps/settings.lua" type="client"/>
+    <script src="client/apps/music.lua" type="client"/>
+
+    <!-- Client main -->
+    <script src="client/phone_ui.lua" type="client"/>
+    <script src="client/main.lua" type="client"/>
+
+    <!-- Server -->
+    <script src="server/database.lua" type="server"/>
+    <script src="server/messages.lua" type="server"/>
+    <script src="server/contacts.lua" type="server"/>
+    <script src="server/calls.lua" type="server"/>
+    <script src="server/main.lua" type="server"/>
+
+    <!-- Phone -->
+    <file src="assets/phone/phone_frame.png"/>
+    <file src="assets/phone/screen_mask.png"/>
+    <file src="assets/phone/dynamic_island.png"/>
+    <file src="assets/phone/home_indicator.png"/>
+    <file src="assets/phone/phone_shadow.png"/>
+
+    <!-- Wallpapers -->
+    <file src="assets/wallpapers/wallpaper_01.png"/>
+    <file src="assets/wallpapers/wallpaper_02.png"/>
+
+    <!-- UI -->
+    <file src="assets/ui/circle.png"/>
+    <file src="assets/ui/rounded_square.png"/>
+    <file src="assets/ui/glass_panel.png"/>
+    <file src="assets/ui/app_dock.png"/>
+
+    <file src="assets/icons/phone.png"/>
+    <file src="assets/icons/messages.png"/>
+    <file src="assets/icons/contacts.png"/>
+    <file src="assets/icons/camera.png"/>
+    <file src="assets/icons/gallery.png"/>
+    <file src="assets/icons/maps.png"/>
+    <file src="assets/icons/bank.png"/>
+    <file src="assets/icons/wallet.png"/>
+    <file src="assets/icons/vehicles.png"/>
+    <file src="assets/icons/properties.png"/>
+    <file src="assets/icons/jobs.png"/>
+    <file src="assets/icons/emergency.png"/>
+    <file src="assets/icons/notes.png"/>
+    <file src="assets/icons/calculator.png"/>
+    <file src="assets/icons/settings.png"/>
+    <file src="assets/icons/music.png"/>
+    <file src="assets/icons/notifications.png"/>
+    <file src="assets/icons/search.png"/>
+    <file src="assets/icons/back.png"/>
+    <file src="assets/icons/close.png"/>
+    <file src="assets/icons/plus.png"/>
+    <file src="assets/icons/delete.png"/>
+    <file src="assets/icons/edit.png"/>
+    <file src="assets/icons/send.png"/>
+    <file src="assets/icons/call.png"/>
+    <file src="assets/icons/end_call.png"/>
+    <file src="assets/icons/mute.png"/>
+    <file src="assets/icons/speaker.png"/>
+    <file src="assets/icons/location.png"/>
+    <file src="assets/icons/lock.png"/>
+    <file src="assets/icons/unlock.png"/>
+
+    <file src="assets/avatars/avatar_01.png"/>
+    <file src="assets/avatars/avatar_02.png"/>
+    <file src="assets/avatars/avatar_03.png"/>
+    <file src="assets/avatars/avatar_04.png"/>
+    <file src="assets/avatars/avatar_05.png"/>
+    <file src="assets/avatars/avatar_06.png"/>
+
+    <!-- Sounds -->
+    <file src="assets/sounds/click.wav"/>
+    <file src="assets/sounds/back.wav"/>
+    <file src="assets/sounds/notification.wav"/>
+    <file src="assets/sounds/message.wav"/>
+    <file src="assets/sounds/ringtone.wav"/>
+    <file src="assets/sounds/accept.wav"/>
+    <file src="assets/sounds/decline.wav"/>
+    <file src="assets/sounds/unlock.wav"/>
+    <file src="assets/sounds/lock.wav"/>
+</meta>

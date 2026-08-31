@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e879f9"/><stop offset="1" stop-color="#a21caf"/></linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<filter id="bl" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9.73"/></filter>
+</defs>
+<rect x="24.064" y="38.144" width="207.872" height="207.872" rx="49.92" fill="#000000" opacity="0.32" filter="url(#bl)"/>
+<rect x="24.064" y="24.064" width="207.872" height="207.872" rx="49.92" fill="url(#g)"/>
+<rect x="24.064" y="24.064" width="207.872" height="133.12" rx="49.92" fill="url(#sh)"/>
+<g transform="translate(60.16 52.48) scale(5.6533)"><path d="M7.2 10L8.5 6.6A1.8 1.8 0 0 1 10.2 5.4h3.6a1.8 1.8 0 0 1 1.7 1.2L16.8 10H7.2zM2.5 10.5A1.5 1.5 0 0 1 4 9h16a1.5 1.5 0 0 1 1.5 1.5v5A1.5 1.5 0 0 1 20 17H4a1.5 1.5 0 0 1-1.5-1.5v-5zM7 14.8a2.4 2.4 0 1 0 0 4.8 2.4 2.4 0 0 0 0-4.8zm0 1.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2z M17 14.8a2.4 2.4 0 1 0 0 4.8 2.4 2.4 0 0 0 0-4.8zm0 1.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="#ffffff" fill-rule="evenodd"/></g>
+</svg>

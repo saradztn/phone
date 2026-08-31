@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f87171"/><stop offset="1" stop-color="#b91c1c"/></linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<filter id="bl" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9.73"/></filter>
+</defs>
+<rect x="24.064" y="38.144" width="207.872" height="207.872" rx="49.92" fill="#000000" opacity="0.32" filter="url(#bl)"/>
+<rect x="24.064" y="24.064" width="207.872" height="207.872" rx="49.92" fill="url(#g)"/>
+<rect x="24.064" y="24.064" width="207.872" height="133.12" rx="49.92" fill="url(#sh)"/>
+<g transform="translate(60.16 52.48) scale(5.6533)"><path d="M9.4 3.5h5.2c.55 0 1 .45 1 1v4.1h4.1c.55 0 1 .45 1 1v5.2c0 .55-.45 1-1 1h-4.1v4.1c0 .55-.45 1-1 1H9.4c-.55 0-1-.45-1-1v-4.1H4.3c-.55 0-1-.45-1-1V9.6c0-.55.45-1 1-1h4.1V4.5c0-.55.45-1 1-1z" fill="#ffffff"/></g>
+</svg>
