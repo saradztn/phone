@@ -280,6 +280,12 @@ end
 
 function Component:setVisible(visible)
     local v = visible and true or false
+    if v then
+        self._closing = false
+        if self.alpha == 0 then
+            self.alpha = 255
+        end
+    end
     if self.visible == v then return self end
     self.visible = v
     self._dirty = true

@@ -82,9 +82,9 @@ function EventEmitter:off(eventName, callback)
 end
 
 function EventEmitter:emit(eventName, ...)
-    if not self._listeners then return false end
+    if not self._listeners then return true end
     local list = self._listeners[eventName]
-    if not list or #list == 0 then return false end
+    if not list or #list == 0 then return true end
 
     -- Snapshot to allow safe mutation during dispatch
     local snapshot = {}
@@ -92,7 +92,7 @@ function EventEmitter:emit(eventName, ...)
         snapshot[i] = list[i]
     end
 
-    local handled = false
+    local allowed = true
     for i = 1, #snapshot do
         local item = snapshot[i]
         if item.once then
@@ -102,13 +102,13 @@ function EventEmitter:emit(eventName, ...)
         if not ok then
             NovaUI.error("Event '%s' handler error: %s", tostring(eventName), tostring(res))
         else
-            handled = true
             if res == false then
+                allowed = false
                 break
             end
         end
     end
-    return handled
+    return allowed
 end
 
 function EventEmitter:removeAllListeners(eventName)

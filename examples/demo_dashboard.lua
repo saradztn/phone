@@ -627,6 +627,10 @@ end
 
 function Demo.open()
     local win = Demo.build()
+    NovaUI.stopAnimations(win)
+    win._closing = false
+    win.alpha = 255
+    win._animOffsetY = 0
     win:setVisible(true)
     win:bringToFront()
     if type(showCursor) == "function" then

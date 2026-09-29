@@ -27,6 +27,8 @@ function Window:onCreate(props)
         self.y = math.floor((sh - self.height) * 0.5)
         self._rawY = NovaUI.unscale(self.y)
     end
+    self._absX = self.x
+    self._absY = self.y
 
     self.zIndex = tonumber(props.zIndex) or NovaUI.Tokens.zIndex.window
     self.title = tostring(props.title or "Window")
@@ -116,11 +118,38 @@ function Window:maximize()
     return self
 end
 
+local function _updateCursorVisibilityAfterClose()
+    if type(showCursor) ~= "function" then return end
+    if NovaUI._registry.modals and #NovaUI._registry.modals > 0 then return end
+    local roots = NovaUI._registry.rootElements or {}
+    for i = 1, #roots do
+        local r = roots[i]
+        if r and not r._destroyed and r.visible and r.type == "window" then
+            return
+        end
+    end
+    pcall(showCursor, false)
+end
+
 function Window:close()
-    local shouldClose = true
-    local res = self:emit("close", self)
-    if res == false then shouldClose = false end
-    if not shouldClose then return self end
+    if self._closing then return self end
+    local shouldClose = self:emit("close", self)
+    if shouldClose == false then return self end
+
+    self._closing = true
+    NovaUI.stopAnimations(self)
+
+    local function finalizeClose()
+        self._closing = false
+        if self.props.destroyOnClose then
+            self:destroy()
+        else
+            self:setVisible(false)
+            self.alpha = 255
+            self._animOffsetY = 0
+        end
+        _updateCursorVisibilityAfterClose()
+    end
 
     if NovaUI.Config.enableAnimations then
         NovaUI.animate(self, {
@@ -128,22 +157,10 @@ function Window:close()
             _animOffsetY = NovaUI.scale(10),
             duration = NovaUI.Tokens.animation.fast,
             easing = "inQuad",
-            onComplete = function()
-                if self.props.destroyOnClose then
-                    self:destroy()
-                else
-                    self:setVisible(false)
-                    self.alpha = 255
-                    self._animOffsetY = 0
-                end
-            end,
+            onComplete = finalizeClose,
         })
     else
-        if self.props.destroyOnClose then
-            self:destroy()
-        else
-            self:setVisible(false)
-        end
+        finalizeClose()
     end
     return self
 end
